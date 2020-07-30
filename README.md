@@ -8,7 +8,7 @@ This is a simple java script quiz given in a game format. Helpul for new commers
 https://afazeez82.github.io/JSQuiz-githubio.com/
 
 ## GLimpse of the app
-![password generator](./Assets/image.png )
+![JavaScript Quiz](./Assets/Quiz App.gif)
 
 ## Give Credit
 I want to give credit to StackFlow and youtube. Found some of the solution from there.
