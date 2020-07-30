@@ -1,4 +1,26 @@
-//Quiz java script code
+//timer code
+
+var sec = 60;
+(function() {
+    function startTimer(){
+        console.log('timer suppose to go')
+        var timer = setInterval(function(){
+            sec--;
+            document.getElementById('timerDisplay').innerHTML='00:'+sec;
+            if (sec < 0) {
+                clearInterval(timer);
+                alert("Time is up!")
+            }
+        }, 1000);
+    }
+    document.getElementById('incorrect').addEventListener('click', function() {
+        sec -= 5;
+        document.getElementById('timerDisplay').innerHTML='00:'+sec;
+    });
+    startTimer();
+})();
+
+
 
 //list of questions
 let questions = [
@@ -44,8 +66,8 @@ window.onload = function () {
 function next() {
   // if the question is last then redirect to final page
   if (question_count == questions.length - 1) {
-    sessionStorage.setItem("time", time);
-    clearInterval(mytime);
+    sessionStorage.setItem("timerDisplay", sec);
+  
     location.href = "end.html";
   }
   console.log(question_count);
@@ -54,6 +76,9 @@ function next() {
   if (user_answer == questions[question_count].answer) {
     points += 10;
     sessionStorage.setItem("points", points);
+    
+  } else {
+    sec -= 5;
   }
   console.log(points);
   question_count++;
