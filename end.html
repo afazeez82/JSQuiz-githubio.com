@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Quiz</title>
+  <!-- style.css -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="end">
+      <i class="fas fa-award award_icon"></i>
+      <h3 class="username">well done! <span class="name"></span></h3>
+      <p class="userpoints">Your Points <span class="points"></span></p>
+      <p class="usertime"> Time taken <span class="time_taken"></span></p><br>
+      <h1 id="finalScore"></h1>
+      <form>
+        <input type="text" name="username" id="username" placeholder="username" />
+        <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+          Save
+        </button><br>
+      </form><br>
+      <a class="btn" href="quiz.html">Play Again</a><br>
+      <a class="btn" href="index.html">Go Home</a><br>
+      <a class="btn" href="highscores.html">High Scores</a>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+  <script src="./highscores.js"></script>
+</body>
+
+</html>
